@@ -1,0 +1,30 @@
+{
+  "python": "3.13.12",
+  "numpy": "2.4.6",
+  "pandas": "3.1.1",
+  "sklearn": "1.9.1",
+  "pyarrow": "26.0.1",
+  "source_rows_used": 39828,
+  "ships": 53,
+  "days": 19,
+  "history_days": 5,
+  "window_s": 600,
+  "publish_lag_s": 180,
+  "horizon_s": 3600,
+  "seeds": [
+    11,
+    22,
+    33,
+    44,
+    55
+  ],
+  "rng": "PCG64",
+  "source_sha256": "f90b3dc64f02a879177d25e20a8266c803e098fce664971e24ed2b89687fd72e",
+  "script_sha256": "6948950f4080043912b8f6de97003de5d53a87caa71d7e05114db2f46e1f6cb8",
+  "feature_freeze": "UTC midnight, arrival-prefix filtered",
+  "limitations": [
+    "Tutorial-selected sample, not complete regional traffic",
+    "Only four test days; seeds are not independent traffic realizations",
+    "Delayed timestamps are simulated, not actual receiver times"
+  ]
+}

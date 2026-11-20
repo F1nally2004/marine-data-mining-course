@@ -1,0 +1,9 @@
+{
+  "repository": "https://github.com/MAPS-Lab/AISdb-Tutorials",
+  "commit": "bb978e03a8469184e421cec8927aae49aacfe8c7",
+  "url": "https://raw.githubusercontent.com/MAPS-Lab/AISdb-Tutorials/bb978e03a8469184e421cec8927aae49aacfe8c7/example_data.db",
+  "bytes": 4911104,
+  "sha256": "f90b3dc64f02a879177d25e20a8266c803e098fce664971e24ed2b89687fd72e",
+  "scope": "Tutorial-selected Gulf of Maine AIS sample; not a complete population",
+  "source_time": "Database time reused as replay event time, not proven ship transmit time"
+}

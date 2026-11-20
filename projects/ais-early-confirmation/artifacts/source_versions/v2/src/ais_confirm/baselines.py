@@ -1,0 +1,5 @@
+METHODS = ('WM_DELTA', 'TIMER_DELTA', 'PAYLOAD_BARRIER', 'UPSTREAM_COUNT_ONLY',
+           'FULL_ID_MANIFEST', 'ID_STREAM_30S', 'SEALED_DIFF_EXACT', 'SEALED_DIFF_HASH')
+
+def requires_seal(method):
+    return method not in {'WM_DELTA', 'TIMER_DELTA'}

@@ -1,0 +1,24 @@
+{
+  "status": "frozen_before_hash_replay",
+  "additive_only": true,
+  "costs_us": {
+    "bloom_probe": 0.07406750000000001
+  },
+  "samples_us_per_probe": [
+    0.07795,
+    0.07745,
+    0.07295,
+    0.0765,
+    0.07445,
+    0.07485,
+    0.07265,
+    0.081005,
+    0.07329,
+    0.07671499999999999,
+    0.073685,
+    0.072615,
+    0.07252,
+    0.072075
+  ],
+  "note": "No existing CPU coefficient changed. Bit probes were not used by exact protocols."
+}

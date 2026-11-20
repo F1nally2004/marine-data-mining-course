@@ -1,0 +1,12 @@
+{
+  "tests_run": 38,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "passed": true,
+  "code_sha256": "92a800d152acb3ec399369c897cd1747fc9832ab8fbdc5399c11fe4415973318",
+  "original_artifacts": {
+    "files_checked": 57,
+    "all_unchanged": true
+  }
+}

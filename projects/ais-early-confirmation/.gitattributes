@@ -1,0 +1,7 @@
+# Preserve frozen byte hashes across Git checkout.
+* -text
+*.png binary
+*.pdf binary
+*.parquet binary
+*.db binary
+*.zip binary

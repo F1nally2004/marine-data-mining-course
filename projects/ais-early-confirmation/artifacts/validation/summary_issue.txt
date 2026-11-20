@@ -1,0 +1,4 @@
+Actual partial-summary attempt failed with AttributeError: DataFrame has no attribute control_bytes.
+Cause: methods that send no control messages have no control_bytes column in the original per-window CSV.
+Fix: normalize absent optional byte columns to zero in the offline summary reader. Preserve original run CSVs unchanged.
+This changes neither simulation parameters nor protocol behavior or observed communication cost.

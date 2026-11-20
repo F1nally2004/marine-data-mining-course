@@ -1,0 +1,94 @@
+{
+  "E1": {
+    "kind": "local",
+    "path": "src\\ais_confirm\\coordinator.py",
+    "sha256": "ee63b7b0f03b653af03bad8f0a8e7775702213eddfad21dd2739138ad30c92c2",
+    "verified_by": "assistant read + programmatic audit",
+    "human_review": "not_recorded"
+  },
+  "E2": {
+    "kind": "local",
+    "path": "reports\\canonical_matrix\\summary_manifest.json",
+    "sha256": "6e206779bc4268058954437e2a185b7375a9bcd5daa1818d02033d681e26a70d",
+    "verified_by": "assistant read + programmatic audit",
+    "human_review": "not_recorded"
+  },
+  "E3": {
+    "kind": "local",
+    "path": "validation\\canonical_matrix_checks.json",
+    "sha256": "75567ca116388fcde0a4888ee31cd5c5d6003a34a628ecf4f50397c86924e050",
+    "verified_by": "assistant read + programmatic audit",
+    "human_review": "not_recorded"
+  },
+  "E4": {
+    "kind": "local",
+    "path": "../AIS漏计风险预实验\\failure_analysis\\失败原因与研究方向复盘.md",
+    "sha256": "7379ef6b76ef38dbf1d6b02aa739d35d75d8fa583ef29d1d629044c4ec16b559",
+    "verified_by": "assistant read + programmatic audit",
+    "human_review": "not_recorded"
+  },
+  "E10": {
+    "kind": "local",
+    "path": "../AIS漏计风险预实验\\data\\source_manifest.json",
+    "sha256": "38ca742ae36223bf1cc7b222336bc0408200a542047f58a8a70e0f42265beff5",
+    "verified_by": "assistant read + programmatic audit",
+    "human_review": "not_recorded"
+  },
+  "E5": {
+    "kind": "primary_web_source",
+    "url": "https://www.vldb.org/pvldb/vol14/p3135-begoli.pdf",
+    "accessed": "2026-11-20",
+    "opened_by": "assistant",
+    "human_review": "not_recorded"
+  },
+  "E6": {
+    "kind": "primary_web_source",
+    "url": "https://github.com/apache/flink/blob/master/docs/content/docs/dev/datastream/event-time/generating_watermarks.md",
+    "accessed": "2026-11-20",
+    "opened_by": "assistant",
+    "human_review": "not_recorded"
+  },
+  "E7": {
+    "kind": "primary_web_source",
+    "url": "https://ipsit.bu.edu/documents/isit2001_short.pdf",
+    "accessed": "2026-11-20",
+    "opened_by": "assistant",
+    "human_review": "not_recorded"
+  },
+  "E8": {
+    "kind": "primary_web_source",
+    "url": "https://arxiv.org/abs/1101.2245",
+    "accessed": "2026-11-20",
+    "opened_by": "assistant",
+    "human_review": "not_recorded"
+  },
+  "E9": {
+    "kind": "primary_web_source",
+    "url": "https://arxiv.org/abs/2402.02668",
+    "accessed": "2026-11-20",
+    "opened_by": "assistant",
+    "human_review": "not_recorded"
+  },
+  "E11": {
+    "kind": "primary_web_source",
+    "url": "https://arxiv.org/abs/2609.00065",
+    "accessed": "2026-11-20",
+    "opened_by": "assistant",
+    "human_review": "not_recorded"
+  },
+  "current_protocol_code_sha256": "92a800d152acb3ec399369c897cd1747fc9832ab8fbdc5399c11fe4415973318",
+  "original_failed_files": {
+    "files_checked": 57,
+    "all_unchanged": true
+  },
+  "numeric_sources": {
+    "accuracy": {
+      "path": "tables/accuracy_counts.csv",
+      "sha256": "ab970bc64378e7f7473d31ff07993a7232f3729d30f3420bdfcebd56caa55019"
+    },
+    "primary": {
+      "path": "tables/replay_primary.csv",
+      "sha256": "b0fa2ec3249e4e6fcb7fd894187411e39c46534041d9bc663410c61c4834f2cc"
+    }
+  }
+}

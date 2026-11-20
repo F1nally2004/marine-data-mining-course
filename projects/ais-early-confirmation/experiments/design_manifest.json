@@ -1,0 +1,83 @@
+{
+  "status": "design_preparation_only_no_protocol_experiments_run",
+  "run_count": 848,
+  "counts_by_phase": {
+    "smoke": 8,
+    "replay": 560,
+    "pressure": 160,
+    "faults": 120
+  },
+  "local_file_sha256": {
+    "experiment_config.json": "784912795b7aa097ec8eea6c65badb0a2ac0efa89137eece761d2a6eeaffa6b6",
+    "prepare_runs.py": "e0405d19801e0acc5352a191f79ae629df4a7e309e3b05634ac0682242c29c45",
+    "技术方案与实验规范.md": "1e0fad0ab1bf19732de15c98fc7a8d6d03349d3e8943c3a26428664f72a8a7ff",
+    "代码模块与实施顺序.md": "fe5c0d8bbf1004edaf03e4d497f520a467a699d10d3358e1c7a0a56b75794b7e",
+    "run_matrix.csv": "dd67f2a9cc4d0829fec153a386fdf368430b0c1ae1f2ac1cd1535cdb68ccbcde"
+  },
+  "input_events_sha256": "65bd388af37cc3f859a3ee770b364afd62830bbbb012ba4f37739d367b56b988",
+  "input_database_sha256": "f90b3dc64f02a879177d25e20a8266c803e098fce664971e24ed2b89687fd72e",
+  "original_failed_artifacts": {
+    "prior_failure_hash_manifest_available": true,
+    "original_files_checked": 57,
+    "all_unchanged": true
+  },
+  "mathematical_design_checks": {
+    "scope": "finite mathematical design checks only; no simulator run",
+    "cardinality_bound_examples": [
+      {
+        "known": [
+          1
+        ],
+        "source_counts": [
+          3,
+          1
+        ],
+        "lower": 3,
+        "upper": 3,
+        "exhaustive_match": true
+      },
+      {
+        "known": [],
+        "source_counts": [
+          2,
+          2
+        ],
+        "lower": 2,
+        "upper": 4,
+        "exhaustive_match": true
+      },
+      {
+        "known": [
+          1,
+          2
+        ],
+        "source_counts": [
+          3,
+          2
+        ],
+        "lower": 3,
+        "upper": 5,
+        "exhaustive_match": true
+      }
+    ],
+    "small_field_prime": 257,
+    "distinct_sets": [
+      [
+        1,
+        2
+      ],
+      [
+        3,
+        4
+      ]
+    ],
+    "collision_points": [
+      131
+    ],
+    "degree_bound_verified": true,
+    "set_order_and_duplicate_invariance": true
+  },
+  "cpu_calibration_exists": false,
+  "implementation_status": "protocol_modules_not_implemented_yet",
+  "note": "Use this frozen matrix for implementation; preparation is not performance evidence."
+}

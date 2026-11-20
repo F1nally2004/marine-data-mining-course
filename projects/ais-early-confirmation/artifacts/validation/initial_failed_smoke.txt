@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "E:\桌面\研究生阶段\课程\海洋数据挖掘技术\AIS窗口提前确认研究\src\ais_confirm\runner.py", line 155, in main
+    result = run_one(spec, cfg, calibration, destination)
+  File "E:\桌面\研究生阶段\课程\海洋数据挖掘技术\AIS窗口提前确认研究\src\ais_confirm\runner.py", line 93, in run_one
+    'process_lifetime_peak_memory_bytes': memory_peak(),
+                                          ~~~~~~~~~~~^^
+  File "E:\桌面\研究生阶段\课程\海洋数据挖掘技术\AIS窗口提前确认研究\src\ais_confirm\runner.py", line 36, in memory_peak
+    if ctypes.windll.psapi.GetProcessMemoryInfo(handle, ctypes.byref(mem), mem.cb):
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [WinError -1073741816] Windows Error 0xc0000008

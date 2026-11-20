@@ -1,0 +1,170 @@
+{
+  "schema_version": "1.0",
+  "study_title": "基于窗口封闭信号与集合差异校验的多源 AIS 去重计数提前确认机制",
+  "status": "frozen_design_not_experiment_results",
+  "input": {
+    "events": "../AIS漏计风险预实验/data/events.parquet",
+    "database": "../AIS漏计风险预实验/data/example_data.db",
+    "database_sha256": "f90b3dc64f02a879177d25e20a8266c803e098fce664971e24ed2b89687fd72e",
+    "source_commit": "bb978e03a8469184e421cec8927aae49aacfe8c7",
+    "evaluation_start_utc": "2022-01-01T00:00:00Z",
+    "evaluation_end_utc_exclusive": "2022-01-20T00:00:00Z",
+    "retain_all_source_empty_windows": true,
+    "evidence_role": "development_and_descriptive_replay_not_new_confirmatory_holdout"
+  },
+  "semantics": {
+    "target": "distinct_mmsi_in_union_of_registered_captured_source_logs",
+    "window_seconds": 600,
+    "time_unit": "integer_microseconds",
+    "first_provisional_lag_seconds": 0,
+    "observation_horizon_seconds": 7200,
+    "guard_windows_after": 3,
+    "publish_statuses": ["PROVISIONAL", "HEURISTIC_FINAL", "EXACT_FINAL", "HASH_FINAL", "REOPENED", "UNCONFIRMED"],
+    "source_roster_frozen_per_window": true,
+    "mmsi_encoding": "uint32",
+    "ordinary_late_payload_after_final": "idempotent_no_count_change",
+    "new_mmsi_after_final": "revise_reopen_record_false_confirmation",
+    "late_updates_enabled_for_every_method": true,
+    "simultaneous_event_order": ["CAPTURE", "NETWORK_RECEIVE", "LOCAL_SEAL", "PUBLISH", "CHECK_DISPATCH", "TIMEOUT"]
+  },
+  "sources": {
+    "count": 4,
+    "assignment": "nearest_primary_plus_second_nearest_copy",
+    "centers_lon_lat": [[-69.75, 41.6], [-67.25, 41.6], [-69.75, 44.0], [-67.25, 44.0]],
+    "distance_longitude_scale": 0.73,
+    "capture_lag_uniform_seconds": [0, 30],
+    "trusted_capture_lateness_bound_seconds": 30,
+    "clock_offset_seconds": 0,
+    "seal_creation": "local_timer_at_window_end_plus_trusted_bound_using_only_captured_prefix",
+    "window_local_sequence": "contiguous_1_based_assigned_on_capture",
+    "guaranteed_primary_capture_in_nominal_runs": true,
+    "empty_sources_must_emit_seal": true,
+    "seal_fields": ["source_id", "window_id", "query_id", "roster_version", "epoch", "last_window_seq", "local_distinct_count", "capture_frontier"],
+    "reopen_policy": "invalidate_until_external_valid_close"
+  },
+  "network": {
+    "rate_bytes_per_second_per_source": 4096,
+    "propagation_delay_uniform_seconds": [0, 20],
+    "iid_slow_probability": 0.1,
+    "iid_slow_delay_uniform_seconds": [240, 1200],
+    "outage_probability_per_source_hour": 0.2,
+    "outage_start_offset_uniform_seconds": [0, 2400],
+    "outage_duration_seconds": 1200,
+    "control_and_data_share_capacity": true,
+    "control_and_data_share_outages": true,
+    "same_delay_law_for_all_packet_types": true,
+    "control_wfq_capacity_share": 0.2,
+    "application_data_body_bytes": 128,
+    "common_application_header_bytes": 48,
+    "max_application_frame_bytes": 1200,
+    "modeled_network_overhead_bytes_per_frame": 40,
+    "request_timeout_seconds": 300,
+    "max_retransmissions": 2,
+    "no_response_means": "unknown_never_empty",
+    "retransmission_reuses_same_snapshot_and_randomness": true
+  },
+  "compute": {
+    "simulation_mode": "serialized_source_and_coordinator_cpu_jobs_with_frozen_calibrated_costs",
+    "source_cpu_workers": 1,
+    "coordinator_cpu_workers": 1,
+    "calibration_input": "synthetic_development_keys_only",
+    "calibration_sizes": [1000, 10000],
+    "calibration_repeats": 7,
+    "calibration_file": "calibration.json",
+    "freeze_calibration_before_replay": true,
+    "zero_cpu_cost_run": "diagnostic_network_only_lower_bound_not_primary_latency_result"
+  },
+  "proof": {
+    "exact_pending_set": "distinct_mmsi_of_closed_window_records_with_seq_above_contiguous_ack",
+    "all_sources_share_one_frozen_receiver_snapshot_per_round": true,
+    "one_hash_candidate_check_per_source_window_epoch_round": true,
+    "bloom_base_fpr": 0.01,
+    "bloom_expected_extra_candidate_budget": 0.1,
+    "bloom_fpr_rule": "min(base_fpr, extra_budget/max(1, receiver_snapshot_size-pending_set_size))",
+    "fingerprint": "product_of_r_minus_distinct_mmsi_mod_prime",
+    "fingerprint_prime_decimal": "170141183460469231731687303715884105727",
+    "fingerprint_field_bytes": 16,
+    "fingerprint_random_point_bytes": 16,
+    "fingerprint_point_uniform_and_independent_of_bloom_and_sets": true,
+    "window_error_budget": 1e-18,
+    "encoding_selection": "exact_if_its_actual_serialized_first_response_bytes_are_not_larger_than_hash_proof",
+    "pending_size_above_receiver_snapshot_size": "skip_bloom_and_send_exact",
+    "failed_hash_candidate_check": "one_exact_fallback_no_repeated_salt_search",
+    "identity_repair": true,
+    "shared_exact_cardinality_bound_fast_path": true,
+    "reported_count_separate_from_known_identity_set_size": true,
+    "bloom_all_positive_alone_never_confirms": true
+  },
+  "methods": [
+    {"id": "WM_DELTA", "delta_seconds": [60, 180, 600, 1200], "primary_delta_seconds": 180, "source_aggregation": "minimum_of_per_source_max_received_event_time_minus_delta", "idle_exclusion": true, "idle_timeout_seconds": 60, "all_sources_idle_behavior": "hold_watermark"},
+    {"id": "TIMER_DELTA", "delta_seconds": [60, 180, 600, 1200], "primary_delta_seconds": 180},
+    {"id": "PAYLOAD_BARRIER"},
+    {"id": "UPSTREAM_COUNT_ONLY"},
+    {"id": "FULL_ID_MANIFEST"},
+    {"id": "ID_STREAM_30S", "batch_period_seconds": 30},
+    {"id": "SEALED_DIFF_EXACT"},
+    {"id": "SEALED_DIFF_HASH"}
+  ],
+  "reference_only": ["GLOBAL_EXACT_COUNT_ORACLE", "NAIVE_SUM_OF_SOURCE_DISTINCT_COUNTS"],
+  "phases": {
+    "smoke": {
+      "seeds": [11], "copy_probabilities": [0.8], "delay_models": ["iid"], "schedulers": ["fifo"],
+      "use_delta_sweep": false, "slice_start_utc": "2022-01-06T00:00:00Z", "slice_end_utc_exclusive": "2022-01-07T00:00:00Z"
+    },
+    "replay": {
+      "seeds": [11, 22, 33, 44, 55], "copy_probabilities": [0.2, 0.8], "delay_models": ["iid", "burst"],
+      "schedulers": ["fifo", "control_wfq"], "use_delta_sweep": true
+    },
+    "pressure": {
+      "seeds": [11, 22, 33, 44, 55], "copy_probabilities": [0.8], "delay_models": ["burst"],
+      "schedulers": ["control_wfq"], "use_delta_sweep": false, "windows_per_case": 6,
+      "cases": [
+        {"id": "n1000_r1", "distinct_ships": 1000, "messages_per_ship_per_window": 1},
+        {"id": "n1000_r5", "distinct_ships": 1000, "messages_per_ship_per_window": 5},
+        {"id": "n10000_r1", "distinct_ships": 10000, "messages_per_ship_per_window": 1},
+        {"id": "n10000_r5", "distinct_ships": 10000, "messages_per_ship_per_window": 5}
+      ],
+      "evidence_role": "synthetic_system_load_not_independent_real_traffic"
+    },
+    "faults": {
+      "seeds": [11, 22, 33], "copy_probabilities": [0.8], "delay_models": ["burst"],
+      "schedulers": ["control_wfq"], "use_delta_sweep": false,
+      "cases": [
+        {"id": "control_loss", "control_packet_drop_probability": 0.2},
+        {"id": "stale_epoch", "inject_old_epoch_control_messages": true},
+        {"id": "capture_bound_breach", "capture_extra_delay_seconds": 300, "capture_extra_delay_probability": 0.01},
+        {"id": "missing_seal", "omit_seal_source_id": 3},
+        {"id": "capture_blind_spot", "all_copies_drop_ship_window_probability": 0.01}
+      ]
+    }
+  },
+  "microbenchmarks": {
+    "paired_cases": ["empty_vs_delayed", "duplicate_pending_vs_new_pending", "overlap_counts_ambiguous", "out_of_order_sequence_hole"],
+    "source_disjoint_count_control": "mmsi_hash_partition_used_only_as_explicit_negative_control",
+    "small_field_collision_test": {"prime": 257, "synthetic_ids_must_be_below_prime": true, "production_error_budget_disabled_only_in_this_diagnostic": true},
+    "payload_bytes_sensitivity": [64, 256],
+    "bloom_only_unsafe_ablation": true,
+    "watermark_without_idle_exclusion_diagnostic": true
+  },
+  "evaluation": {
+    "primary_metrics": ["valid_confirmation_latency", "ever_false_confirmation_rate", "error_at_common_horizons", "total_network_bytes"],
+    "common_horizons_seconds": [0, 60, 180, 600, 1200, 3600, 7200],
+    "also_report": ["first_claim_latency", "first_publication_latency", "confirmation_coverage", "source_closure_wait", "verification_wait", "full_payload_completion_time", "control_bytes", "identity_bytes", "payload_bytes", "retransmission_bytes", "cpu", "peak_memory", "repair_mmsi_count", "exact_final_count", "hash_final_count", "hash_error_budget_sum"],
+    "separate_no_repair_numeric_repair_and_identity_repair": true,
+    "fault_truths": ["captured_source_union", "original_trace_union"],
+    "pair_methods_within_source_date_and_seed": true,
+    "statistical_block": "original_utc_date_not_messages_or_seed_replicates",
+    "censored_windows_never_discarded": true,
+    "report_all_seeds_and_all_predefined_cases": true
+  },
+  "leakage_guards": {
+    "separate_source_coordinator_oracle_interfaces": true,
+    "source_can_only_read_captured_local_prefix": true,
+    "coordinator_can_only_read_delivered_messages": true,
+    "pending_sets_must_not_use_simulator_future_arrival_times": true,
+    "oracle_truth_read_only_after_protocol_run": true,
+    "namespace_rng_by_purpose": true,
+    "do_not_remove_original_empty_windows": true,
+    "future_prefix_invariance_tests_required": true
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "issue": "Unsealed WM_DELTA/TIMER_DELTA sources erroneously created a private sealed flag and later emitted REOPEN on capture-bound breach.",
+  "fix": "Return from the local close callback before setting sealed for methods that never send SEAL. Normal late payloads still revise and re-claim HEURISTIC_FINAL.",
+  "affected_frozen_rows": "faults/capture_bound_breach/WM_DELTA or TIMER_DELTA, seeds 11,22,33: six rows",
+  "unchanged_branch_argument": "Other methods retain identical code paths. All other scenarios enforce capture<=b+30 and serialize pre-timer capture jobs before close, so the private flag difference cannot affect their baseline outputs.",
+  "validation": "Preserve all 848 v1 results and archived source hash, rerun six affected rows and all eight smoke rows after adding regression tests. Compare deterministic smoke protocol artifacts byte for byte.",
+  "parameter_changes": false,
+  "v1_code_sha256": "fa9cf32636c3e3f8e754a1c7e54f324eed07c4f5cf4033f680223ad553827283"
+}

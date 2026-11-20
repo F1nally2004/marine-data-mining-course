@@ -1,0 +1,113 @@
+{
+  "runs": [
+    {
+      "run_id": "smoke_5532e18936d5a2b2",
+      "status": "checked",
+      "result_path": "E:\\桌面\\研究生阶段\\课程\\海洋数据挖掘技术\\AIS窗口提前确认研究\\publication\\github_repo\\experiments\\outputs\\package_smoke\\smoke_5532e18936d5a2b2",
+      "code_sha256": "92a800d152acb3ec399369c897cd1747fc9832ab8fbdc5399c11fe4415973318",
+      "method": "TIMER_DELTA",
+      "windows": 144,
+      "confirmed": 144,
+      "false_count_windows": 1,
+      "safe_unseen_after_exact": 0,
+      "sequence_holes": 1552,
+      "cross_source_duplicates": 537
+    },
+    {
+      "run_id": "smoke_7594be8f3b748f77",
+      "status": "checked",
+      "result_path": "E:\\桌面\\研究生阶段\\课程\\海洋数据挖掘技术\\AIS窗口提前确认研究\\publication\\github_repo\\experiments\\outputs\\package_smoke\\smoke_7594be8f3b748f77",
+      "code_sha256": "92a800d152acb3ec399369c897cd1747fc9832ab8fbdc5399c11fe4415973318",
+      "method": "SEALED_DIFF_HASH",
+      "windows": 144,
+      "confirmed": 144,
+      "false_count_windows": 0,
+      "safe_unseen_after_exact": 1,
+      "sequence_holes": 1552,
+      "cross_source_duplicates": 537
+    },
+    {
+      "run_id": "smoke_8fafa18157408f7b",
+      "status": "checked",
+      "result_path": "E:\\桌面\\研究生阶段\\课程\\海洋数据挖掘技术\\AIS窗口提前确认研究\\publication\\github_repo\\experiments\\outputs\\package_smoke\\smoke_8fafa18157408f7b",
+      "code_sha256": "92a800d152acb3ec399369c897cd1747fc9832ab8fbdc5399c11fe4415973318",
+      "method": "FULL_ID_MANIFEST",
+      "windows": 144,
+      "confirmed": 144,
+      "false_count_windows": 0,
+      "safe_unseen_after_exact": 0,
+      "sequence_holes": 1552,
+      "cross_source_duplicates": 537
+    },
+    {
+      "run_id": "smoke_9bb05230543ceb19",
+      "status": "checked",
+      "result_path": "E:\\桌面\\研究生阶段\\课程\\海洋数据挖掘技术\\AIS窗口提前确认研究\\publication\\github_repo\\experiments\\outputs\\package_smoke\\smoke_9bb05230543ceb19",
+      "code_sha256": "92a800d152acb3ec399369c897cd1747fc9832ab8fbdc5399c11fe4415973318",
+      "method": "PAYLOAD_BARRIER",
+      "windows": 144,
+      "confirmed": 144,
+      "false_count_windows": 0,
+      "safe_unseen_after_exact": 0,
+      "sequence_holes": 1552,
+      "cross_source_duplicates": 537
+    },
+    {
+      "run_id": "smoke_a9a5baffcf4a5dc3",
+      "status": "checked",
+      "result_path": "E:\\桌面\\研究生阶段\\课程\\海洋数据挖掘技术\\AIS窗口提前确认研究\\publication\\github_repo\\experiments\\outputs\\package_smoke\\smoke_a9a5baffcf4a5dc3",
+      "code_sha256": "92a800d152acb3ec399369c897cd1747fc9832ab8fbdc5399c11fe4415973318",
+      "method": "SEALED_DIFF_EXACT",
+      "windows": 144,
+      "confirmed": 144,
+      "false_count_windows": 0,
+      "safe_unseen_after_exact": 1,
+      "sequence_holes": 1552,
+      "cross_source_duplicates": 537
+    },
+    {
+      "run_id": "smoke_bdcc348daf8dea54",
+      "status": "checked",
+      "result_path": "E:\\桌面\\研究生阶段\\课程\\海洋数据挖掘技术\\AIS窗口提前确认研究\\publication\\github_repo\\experiments\\outputs\\package_smoke\\smoke_bdcc348daf8dea54",
+      "code_sha256": "92a800d152acb3ec399369c897cd1747fc9832ab8fbdc5399c11fe4415973318",
+      "method": "WM_DELTA",
+      "windows": 144,
+      "confirmed": 144,
+      "false_count_windows": 1,
+      "safe_unseen_after_exact": 0,
+      "sequence_holes": 1552,
+      "cross_source_duplicates": 537
+    },
+    {
+      "run_id": "smoke_cfe8a1785777d805",
+      "status": "checked",
+      "result_path": "E:\\桌面\\研究生阶段\\课程\\海洋数据挖掘技术\\AIS窗口提前确认研究\\publication\\github_repo\\experiments\\outputs\\package_smoke\\smoke_cfe8a1785777d805",
+      "code_sha256": "92a800d152acb3ec399369c897cd1747fc9832ab8fbdc5399c11fe4415973318",
+      "method": "UPSTREAM_COUNT_ONLY",
+      "windows": 144,
+      "confirmed": 144,
+      "false_count_windows": 0,
+      "safe_unseen_after_exact": 1,
+      "sequence_holes": 1552,
+      "cross_source_duplicates": 537
+    },
+    {
+      "run_id": "smoke_fdc1f696eb948d05",
+      "status": "checked",
+      "result_path": "E:\\桌面\\研究生阶段\\课程\\海洋数据挖掘技术\\AIS窗口提前确认研究\\publication\\github_repo\\experiments\\outputs\\package_smoke\\smoke_fdc1f696eb948d05",
+      "code_sha256": "92a800d152acb3ec399369c897cd1747fc9832ab8fbdc5399c11fe4415973318",
+      "method": "ID_STREAM_30S",
+      "windows": 144,
+      "confirmed": 144,
+      "false_count_windows": 0,
+      "safe_unseen_after_exact": 0,
+      "sequence_holes": 1552,
+      "cross_source_duplicates": 537
+    }
+  ],
+  "all_complete": true,
+  "original_failed_artifacts": {
+    "files_checked": 57,
+    "all_unchanged": true
+  }
+}

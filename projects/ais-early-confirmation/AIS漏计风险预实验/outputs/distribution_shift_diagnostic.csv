@@ -1,0 +1,6 @@
+split,windows,empty_windows,maximum_source_lag_s
+gap,288,0,523.0
+test,576,117,70652.0
+train,864,0,1102.0
+val,288,18,11249.0
+warmup,720,80,48010.0

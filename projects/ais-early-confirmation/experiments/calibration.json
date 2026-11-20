@@ -1,0 +1,437 @@
+{
+  "schema_version": 1,
+  "status": "frozen_before_protocol_replay",
+  "python": "3.13.12 (tags/v3.13.12:1cbe481, Feb  3 2026, 18:22:25) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "costs_us": {
+    "set_key": 0.026215,
+    "sort_key": 0.026924999999999998,
+    "serialize_byte": 0.0032674999999999996,
+    "bloom_key": 0.38434999999999997,
+    "modmul": 0.181345
+  },
+  "method": "median of 7 repetitions at each of 1000/10000 synthetic keys; additive per-unit CPU approximation",
+  "limitations": "CPU model includes measured operation costs; heap scheduling and Python control flow are measured in wall/CPU runtime but not all charged to simulated endpoint CPUs.",
+  "samples": [
+    {
+      "operation": "set_key",
+      "n": 1000,
+      "repeat": 0,
+      "total_us": 20.8
+    },
+    {
+      "operation": "sort_key",
+      "n": 1000,
+      "repeat": 0,
+      "total_us": 17.3
+    },
+    {
+      "operation": "serialize_byte",
+      "n": 1000,
+      "repeat": 0,
+      "total_us": 26.7
+    },
+    {
+      "operation": "bloom_key",
+      "n": 1000,
+      "repeat": 0,
+      "total_us": 425.5
+    },
+    {
+      "operation": "modmul",
+      "n": 1000,
+      "repeat": 0,
+      "total_us": 179.3
+    },
+    {
+      "operation": "set_key",
+      "n": 1000,
+      "repeat": 1,
+      "total_us": 10.8
+    },
+    {
+      "operation": "sort_key",
+      "n": 1000,
+      "repeat": 1,
+      "total_us": 15.8
+    },
+    {
+      "operation": "serialize_byte",
+      "n": 1000,
+      "repeat": 1,
+      "total_us": 10.6
+    },
+    {
+      "operation": "bloom_key",
+      "n": 1000,
+      "repeat": 1,
+      "total_us": 388.3
+    },
+    {
+      "operation": "modmul",
+      "n": 1000,
+      "repeat": 1,
+      "total_us": 160.8
+    },
+    {
+      "operation": "set_key",
+      "n": 1000,
+      "repeat": 2,
+      "total_us": 9.1
+    },
+    {
+      "operation": "sort_key",
+      "n": 1000,
+      "repeat": 2,
+      "total_us": 14.2
+    },
+    {
+      "operation": "serialize_byte",
+      "n": 1000,
+      "repeat": 2,
+      "total_us": 9.3
+    },
+    {
+      "operation": "bloom_key",
+      "n": 1000,
+      "repeat": 2,
+      "total_us": 384.6
+    },
+    {
+      "operation": "modmul",
+      "n": 1000,
+      "repeat": 2,
+      "total_us": 159.8
+    },
+    {
+      "operation": "set_key",
+      "n": 1000,
+      "repeat": 3,
+      "total_us": 9.0
+    },
+    {
+      "operation": "sort_key",
+      "n": 1000,
+      "repeat": 3,
+      "total_us": 14.0
+    },
+    {
+      "operation": "serialize_byte",
+      "n": 1000,
+      "repeat": 3,
+      "total_us": 9.5
+    },
+    {
+      "operation": "bloom_key",
+      "n": 1000,
+      "repeat": 3,
+      "total_us": 390.2
+    },
+    {
+      "operation": "modmul",
+      "n": 1000,
+      "repeat": 3,
+      "total_us": 159.8
+    },
+    {
+      "operation": "set_key",
+      "n": 1000,
+      "repeat": 4,
+      "total_us": 8.8
+    },
+    {
+      "operation": "sort_key",
+      "n": 1000,
+      "repeat": 4,
+      "total_us": 13.8
+    },
+    {
+      "operation": "serialize_byte",
+      "n": 1000,
+      "repeat": 4,
+      "total_us": 21.3
+    },
+    {
+      "operation": "bloom_key",
+      "n": 1000,
+      "repeat": 4,
+      "total_us": 383.1
+    },
+    {
+      "operation": "modmul",
+      "n": 1000,
+      "repeat": 4,
+      "total_us": 172.6
+    },
+    {
+      "operation": "set_key",
+      "n": 1000,
+      "repeat": 5,
+      "total_us": 9.0
+    },
+    {
+      "operation": "sort_key",
+      "n": 1000,
+      "repeat": 5,
+      "total_us": 13.8
+    },
+    {
+      "operation": "serialize_byte",
+      "n": 1000,
+      "repeat": 5,
+      "total_us": 8.8
+    },
+    {
+      "operation": "bloom_key",
+      "n": 1000,
+      "repeat": 5,
+      "total_us": 384.1
+    },
+    {
+      "operation": "modmul",
+      "n": 1000,
+      "repeat": 5,
+      "total_us": 159.6
+    },
+    {
+      "operation": "set_key",
+      "n": 1000,
+      "repeat": 6,
+      "total_us": 8.6
+    },
+    {
+      "operation": "sort_key",
+      "n": 1000,
+      "repeat": 6,
+      "total_us": 13.6
+    },
+    {
+      "operation": "serialize_byte",
+      "n": 1000,
+      "repeat": 6,
+      "total_us": 9.0
+    },
+    {
+      "operation": "bloom_key",
+      "n": 1000,
+      "repeat": 6,
+      "total_us": 383.2
+    },
+    {
+      "operation": "modmul",
+      "n": 1000,
+      "repeat": 6,
+      "total_us": 160.4
+    },
+    {
+      "operation": "set_key",
+      "n": 10000,
+      "repeat": 0,
+      "total_us": 325.4
+    },
+    {
+      "operation": "sort_key",
+      "n": 10000,
+      "repeat": 0,
+      "total_us": 365.5
+    },
+    {
+      "operation": "serialize_byte",
+      "n": 10000,
+      "repeat": 0,
+      "total_us": 293.8
+    },
+    {
+      "operation": "bloom_key",
+      "n": 10000,
+      "repeat": 0,
+      "total_us": 4115.1
+    },
+    {
+      "operation": "modmul",
+      "n": 10000,
+      "repeat": 0,
+      "total_us": 1910.9
+    },
+    {
+      "operation": "set_key",
+      "n": 10000,
+      "repeat": 1,
+      "total_us": 359.2
+    },
+    {
+      "operation": "sort_key",
+      "n": 10000,
+      "repeat": 1,
+      "total_us": 414.0
+    },
+    {
+      "operation": "serialize_byte",
+      "n": 10000,
+      "repeat": 1,
+      "total_us": 146.4
+    },
+    {
+      "operation": "bloom_key",
+      "n": 10000,
+      "repeat": 1,
+      "total_us": 3782.6
+    },
+    {
+      "operation": "modmul",
+      "n": 10000,
+      "repeat": 1,
+      "total_us": 2010.5
+    },
+    {
+      "operation": "set_key",
+      "n": 10000,
+      "repeat": 2,
+      "total_us": 333.9
+    },
+    {
+      "operation": "sort_key",
+      "n": 10000,
+      "repeat": 2,
+      "total_us": 405.5
+    },
+    {
+      "operation": "serialize_byte",
+      "n": 10000,
+      "repeat": 2,
+      "total_us": 145.0
+    },
+    {
+      "operation": "bloom_key",
+      "n": 10000,
+      "repeat": 2,
+      "total_us": 3783.2
+    },
+    {
+      "operation": "modmul",
+      "n": 10000,
+      "repeat": 2,
+      "total_us": 1833.9
+    },
+    {
+      "operation": "set_key",
+      "n": 10000,
+      "repeat": 3,
+      "total_us": 316.3
+    },
+    {
+      "operation": "sort_key",
+      "n": 10000,
+      "repeat": 3,
+      "total_us": 635.8
+    },
+    {
+      "operation": "serialize_byte",
+      "n": 10000,
+      "repeat": 3,
+      "total_us": 139.3
+    },
+    {
+      "operation": "bloom_key",
+      "n": 10000,
+      "repeat": 3,
+      "total_us": 3885.8
+    },
+    {
+      "operation": "modmul",
+      "n": 10000,
+      "repeat": 3,
+      "total_us": 1932.8
+    },
+    {
+      "operation": "set_key",
+      "n": 10000,
+      "repeat": 4,
+      "total_us": 330.6
+    },
+    {
+      "operation": "sort_key",
+      "n": 10000,
+      "repeat": 4,
+      "total_us": 408.2
+    },
+    {
+      "operation": "serialize_byte",
+      "n": 10000,
+      "repeat": 4,
+      "total_us": 125.5
+    },
+    {
+      "operation": "bloom_key",
+      "n": 10000,
+      "repeat": 4,
+      "total_us": 3767.1
+    },
+    {
+      "operation": "modmul",
+      "n": 10000,
+      "repeat": 4,
+      "total_us": 1844.5
+    },
+    {
+      "operation": "set_key",
+      "n": 10000,
+      "repeat": 5,
+      "total_us": 351.7
+    },
+    {
+      "operation": "sort_key",
+      "n": 10000,
+      "repeat": 5,
+      "total_us": 430.4
+    },
+    {
+      "operation": "serialize_byte",
+      "n": 10000,
+      "repeat": 5,
+      "total_us": 135.7
+    },
+    {
+      "operation": "bloom_key",
+      "n": 10000,
+      "repeat": 5,
+      "total_us": 3949.4
+    },
+    {
+      "operation": "modmul",
+      "n": 10000,
+      "repeat": 5,
+      "total_us": 1891.5
+    },
+    {
+      "operation": "set_key",
+      "n": 10000,
+      "repeat": 6,
+      "total_us": 351.6
+    },
+    {
+      "operation": "sort_key",
+      "n": 10000,
+      "repeat": 6,
+      "total_us": 447.2
+    },
+    {
+      "operation": "serialize_byte",
+      "n": 10000,
+      "repeat": 6,
+      "total_us": 125.7
+    },
+    {
+      "operation": "bloom_key",
+      "n": 10000,
+      "repeat": 6,
+      "total_us": 3816.5
+    },
+    {
+      "operation": "modmul",
+      "n": 10000,
+      "repeat": 6,
+      "total_us": 1842.6
+    }
+  ]
+}

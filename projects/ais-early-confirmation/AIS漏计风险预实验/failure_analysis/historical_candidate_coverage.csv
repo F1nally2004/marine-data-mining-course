@@ -1,0 +1,11 @@
+scenario,seed,missed_ship_window_pairs,known_in_past_5days,eligible_same_slot_candidate
+iid,11,23,22,21
+iid,22,25,23,22
+iid,33,27,25,23
+iid,44,28,28,26
+iid,55,21,21,21
+burst,11,71,70,67
+burst,22,80,80,68
+burst,33,71,68,65
+burst,44,60,59,57
+burst,55,67,65,61

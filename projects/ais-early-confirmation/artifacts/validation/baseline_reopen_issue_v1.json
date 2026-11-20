@@ -1,0 +1,10 @@
+{
+  "WM_DELTA": {
+    "emitted_reopen": true,
+    "expected_emitted_reopen": false
+  },
+  "TIMER_DELTA": {
+    "emitted_reopen": true,
+    "expected_emitted_reopen": false
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "status": "verified_38_tests_8_smoke_9_figures",
+  "historical_matrix": 848,
+  "historical_selected_versions": [
+    "92a800d152acb3ec399369c897cd1747fc9832ab8fbdc5399c11fe4415973318",
+    "fa9cf32636c3e3f8e754a1c7e54f324eed07c4f5cf4033f680223ad553827283"
+  ],
+  "current_code_sha256": "92a800d152acb3ec399369c897cd1747fc9832ab8fbdc5399c11fe4415973318",
+  "original_current_code_identical": true,
+  "legacy_protected_files": {
+    "files_checked": 57,
+    "all_unchanged": true
+  },
+  "repository_url": "[待填写]",
+  "raw_archive_url": "[待填写]",
+  "large_current_raw_logs_bundled": false
+}

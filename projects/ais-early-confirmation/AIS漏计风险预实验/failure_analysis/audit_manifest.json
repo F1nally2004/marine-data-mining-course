@@ -1,0 +1,9 @@
+{
+  "original_files_checked": 57,
+  "all_original_files_unchanged": true,
+  "original_database_rows": 40000,
+  "database_rows_inside_largest_gap": 0,
+  "maximum_prediction_reconstruction_difference": 0.0,
+  "auditor_sha256": "e5554874c3413514f050151d9a6798c86e69756e0852d4d66e667c918de7d81c",
+  "scope": "Post-hoc explanation; no new out-of-sample performance claim; no parameter selection"
+}

@@ -1,0 +1,17 @@
+[
+  {
+    "event": "initial_smoke_process_memory_metric_failure",
+    "output": "outputs/exact_gate_v1",
+    "reason": "ctypes default return type truncated the Windows process HANDLE",
+    "fix": "declare HANDLE return type and GetProcessMemoryInfo argument types; preserve FAILED.txt and rerun in a new directory",
+    "experimental_parameters_changed": false
+  },
+  {
+    "event": "pressure_worker_refused_active_run_directory",
+    "run_id": "pressure_32f8af4fff350d5c",
+    "reason": "a narrower identity-method worker already owned that row; original broad worker stopped rather than overwrite",
+    "fix": "retain active owner; continue remaining WM/TIMER/PAYLOAD/COUNT rows with disjoint method selection",
+    "experimental_parameters_changed": false,
+    "protocol_failure": false
+  }
+]

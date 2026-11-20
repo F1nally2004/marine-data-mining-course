@@ -1,0 +1,33 @@
+# Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.mpl-cache/
+.ipynb_checkpoints/
+
+# Editor / operating system / temporary files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+~$*
+*.tmp
+*.temp
+*.bak
+
+# Local environment settings
+.env
+.env.*
+!.env.example
+
+# Generated protocol runs and regenerated figures
+projects/ais-early-confirmation/experiments/outputs/
+projects/ais-early-confirmation/reproduced_report/
+projects/ais-early-confirmation/artifacts/raw_runs/
+
+# Do not ignore all outputs/, CSV, Parquet or database files:
+# the frozen pilot outputs and small reproducible samples are intentional.

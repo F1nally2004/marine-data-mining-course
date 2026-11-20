@@ -1,0 +1,81 @@
+{
+  "prepared_on": "2026-11-20",
+  "status": "verified",
+  "scientific_experiments_rerun": false,
+  "copied_or_link_adjusted_files_verified": 252,
+  "byte_identical_files": 250,
+  "link_adjusted_note_files": 2,
+  "course_links_replaced": 11,
+  "protected_files_verified": 57,
+  "existing_local_links_verified": 39,
+  "inherited_upstream_link_exceptions": [
+    {
+      "file": "projects/ais-early-confirmation/AIS漏计风险预实验/data/source_README.md",
+      "link": "0-quick-start.ipynb",
+      "reason": "受保护上游 README 内部教程链接；上游地址见 PACKAGING.md"
+    },
+    {
+      "file": "projects/ais-early-confirmation/AIS漏计风险预实验/data/source_README.md",
+      "link": "1-database-loading.ipynb",
+      "reason": "受保护上游 README 内部教程链接；上游地址见 PACKAGING.md"
+    },
+    {
+      "file": "projects/ais-early-confirmation/AIS漏计风险预实验/data/source_README.md",
+      "link": "2-data-querying.ipynb",
+      "reason": "受保护上游 README 内部教程链接；上游地址见 PACKAGING.md"
+    },
+    {
+      "file": "projects/ais-early-confirmation/AIS漏计风险预实验/data/source_README.md",
+      "link": "3-data-cleaning.ipynb",
+      "reason": "受保护上游 README 内部教程链接；上游地址见 PACKAGING.md"
+    },
+    {
+      "file": "projects/ais-early-confirmation/AIS漏计风险预实验/data/source_README.md",
+      "link": "4-data-visualization.ipynb",
+      "reason": "受保护上游 README 内部教程链接；上游地址见 PACKAGING.md"
+    },
+    {
+      "file": "projects/ais-early-confirmation/AIS漏计风险预实验/data/source_README.md",
+      "link": "5-track-interpolation.ipynb",
+      "reason": "受保护上游 README 内部教程链接；上游地址见 PACKAGING.md"
+    },
+    {
+      "file": "projects/ais-early-confirmation/AIS漏计风险预实验/data/source_README.md",
+      "link": "6-calculations.ipynb",
+      "reason": "受保护上游 README 内部教程链接；上游地址见 PACKAGING.md"
+    },
+    {
+      "file": "projects/ais-early-confirmation/AIS漏计风险预实验/data/source_README.md",
+      "link": "7-using-your-ais-data.ipynb",
+      "reason": "受保护上游 README 内部教程链接；上游地址见 PACKAGING.md"
+    },
+    {
+      "file": "projects/ais-early-confirmation/AIS漏计风险预实验/data/source_README.md",
+      "link": "8-export-data-to-csv.ipynb",
+      "reason": "受保护上游 README 内部教程链接；上游地址见 PACKAGING.md"
+    },
+    {
+      "file": "projects/ais-early-confirmation/AIS漏计风险预实验/data/source_README.md",
+      "link": "9-bathymetric-data.ipynb",
+      "reason": "受保护上游 README 内部教程链接；上游地址见 PACKAGING.md"
+    },
+    {
+      "file": "projects/ais-early-confirmation/AIS漏计风险预实验/data/source_README.md",
+      "link": "CITATION.cff",
+      "reason": "受保护上游 README 内部教程链接；上游地址见 PACKAGING.md"
+    },
+    {
+      "file": "projects/ais-early-confirmation/AIS漏计风险预实验/data/source_README.md",
+      "link": "LICENSE",
+      "reason": "受保护上游 README 内部教程链接；上游地址见 PACKAGING.md"
+    }
+  ],
+  "report_docx_structure_valid": true,
+  "over_100_mib_files": 0,
+  "cache_files": 0,
+  "failures": [],
+  "git_upload_file_count": 262,
+  "unexpected_ignored_files": [],
+  "git_metadata_created_in_upload_folder": false,
+  "total_mib_approx": 44.14
+}

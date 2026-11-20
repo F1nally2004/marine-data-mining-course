@@ -1,0 +1,8 @@
+# Preserve copied files and frozen hashes across checkout.
+* -text
+*.docx binary
+*.png binary
+*.pdf binary
+*.parquet binary
+*.db binary
+*.zip binary

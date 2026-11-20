@@ -1,0 +1,426 @@
+{
+  "status": "verified",
+  "unit_tests": 38,
+  "packaged_smoke_runs": 8,
+  "smoke_equivalent_artifacts": 72,
+  "redrawn_figures": 9,
+  "numeric_tables_equivalent": 6,
+  "png_comparisons": [
+    {
+      "name": "fig01_delay_coverage.png",
+      "png_identical": true
+    },
+    {
+      "name": "fig02_accuracy.png",
+      "png_identical": true
+    },
+    {
+      "name": "fig03_communication.png",
+      "png_identical": true
+    },
+    {
+      "name": "fig04_link_scenarios.png",
+      "png_identical": true
+    },
+    {
+      "name": "fig05_pressure.png",
+      "png_identical": true
+    },
+    {
+      "name": "fig06_faults.png",
+      "png_identical": true
+    },
+    {
+      "name": "fig07_tradeoff.png",
+      "png_identical": true
+    },
+    {
+      "name": "fig08_failed_prediction.png",
+      "png_identical": true
+    },
+    {
+      "name": "fig09_daily_paired.png",
+      "png_identical": true
+    }
+  ],
+  "protocol_code_sha256": "92a800d152acb3ec399369c897cd1747fc9832ab8fbdc5399c11fe4415973318",
+  "protocol_code_unchanged": true,
+  "historical_matrix_configurations": 848,
+  "historical_replaced_runs": 6,
+  "full_matrix_rerun_in_package": false,
+  "fresh_environment_install_tested": false,
+  "interpreter_used": "existing Python 3.13.12 environment with locked packages",
+  "original_protected_files": {
+    "files_checked": 57,
+    "all_unchanged": true
+  },
+  "packaged_protected_files": {
+    "files_checked": 57,
+    "all_unchanged": true
+  },
+  "repository_remote_created": false,
+  "repository_url": "[待填写]",
+  "readme_local_links_checked": true,
+  "smoke_comparisons": [
+    {
+      "run_id": "smoke_5532e18936d5a2b2",
+      "file": "source_events.parquet",
+      "identical": true
+    },
+    {
+      "run_id": "smoke_5532e18936d5a2b2",
+      "file": "message_log.parquet",
+      "identical": true
+    },
+    {
+      "run_id": "smoke_5532e18936d5a2b2",
+      "file": "publications.parquet",
+      "identical": true
+    },
+    {
+      "run_id": "smoke_5532e18936d5a2b2",
+      "file": "source_checks.parquet",
+      "identical": true
+    },
+    {
+      "run_id": "smoke_5532e18936d5a2b2",
+      "file": "proof_checks.parquet",
+      "identical": true
+    },
+    {
+      "run_id": "smoke_5532e18936d5a2b2",
+      "file": "protocol_events.parquet",
+      "identical": true
+    },
+    {
+      "run_id": "smoke_5532e18936d5a2b2",
+      "file": "truth_captured.parquet",
+      "identical": true
+    },
+    {
+      "run_id": "smoke_5532e18936d5a2b2",
+      "file": "truth_trace.parquet",
+      "identical": true
+    },
+    {
+      "run_id": "smoke_5532e18936d5a2b2",
+      "file": "window_metrics.csv",
+      "identical": true
+    },
+    {
+      "run_id": "smoke_7594be8f3b748f77",
+      "file": "source_events.parquet",
+      "identical": true
+    },
+    {
+      "run_id": "smoke_7594be8f3b748f77",
+      "file": "message_log.parquet",
+      "identical": true
+    },
+    {
+      "run_id": "smoke_7594be8f3b748f77",
+      "file": "publications.parquet",
+      "identical": true
+    },
+    {
+      "run_id": "smoke_7594be8f3b748f77",
+      "file": "source_checks.parquet",
+      "identical": true
+    },
+    {
+      "run_id": "smoke_7594be8f3b748f77",
+      "file": "proof_checks.parquet",
+      "identical": true
+    },
+    {
+      "run_id": "smoke_7594be8f3b748f77",
+      "file": "protocol_events.parquet",
+      "identical": true
+    },
+    {
+      "run_id": "smoke_7594be8f3b748f77",
+      "file": "truth_captured.parquet",
+      "identical": true
+    },
+    {
+      "run_id": "smoke_7594be8f3b748f77",
+      "file": "truth_trace.parquet",
+      "identical": true
+    },
+    {
+      "run_id": "smoke_7594be8f3b748f77",
+      "file": "window_metrics.csv",
+      "identical": true
+    },
+    {
+      "run_id": "smoke_8fafa18157408f7b",
+      "file": "source_events.parquet",
+      "identical": true
+    },
+    {
+      "run_id": "smoke_8fafa18157408f7b",
+      "file": "message_log.parquet",
+      "identical": true
+    },
+    {
+      "run_id": "smoke_8fafa18157408f7b",
+      "file": "publications.parquet",
+      "identical": true
+    },
+    {
+      "run_id": "smoke_8fafa18157408f7b",
+      "file": "source_checks.parquet",
+      "identical": true
+    },
+    {
+      "run_id": "smoke_8fafa18157408f7b",
+      "file": "proof_checks.parquet",
+      "identical": true
+    },
+    {
+      "run_id": "smoke_8fafa18157408f7b",
+      "file": "protocol_events.parquet",
+      "identical": true
+    },
+    {
+      "run_id": "smoke_8fafa18157408f7b",
+      "file": "truth_captured.parquet",
+      "identical": true
+    },
+    {
+      "run_id": "smoke_8fafa18157408f7b",
+      "file": "truth_trace.parquet",
+      "identical": true
+    },
+    {
+      "run_id": "smoke_8fafa18157408f7b",
+      "file": "window_metrics.csv",
+      "identical": true
+    },
+    {
+      "run_id": "smoke_9bb05230543ceb19",
+      "file": "source_events.parquet",
+      "identical": true
+    },
+    {
+      "run_id": "smoke_9bb05230543ceb19",
+      "file": "message_log.parquet",
+      "identical": true
+    },
+    {
+      "run_id": "smoke_9bb05230543ceb19",
+      "file": "publications.parquet",
+      "identical": true
+    },
+    {
+      "run_id": "smoke_9bb05230543ceb19",
+      "file": "source_checks.parquet",
+      "identical": true
+    },
+    {
+      "run_id": "smoke_9bb05230543ceb19",
+      "file": "proof_checks.parquet",
+      "identical": true
+    },
+    {
+      "run_id": "smoke_9bb05230543ceb19",
+      "file": "protocol_events.parquet",
+      "identical": true
+    },
+    {
+      "run_id": "smoke_9bb05230543ceb19",
+      "file": "truth_captured.parquet",
+      "identical": true
+    },
+    {
+      "run_id": "smoke_9bb05230543ceb19",
+      "file": "truth_trace.parquet",
+      "identical": true
+    },
+    {
+      "run_id": "smoke_9bb05230543ceb19",
+      "file": "window_metrics.csv",
+      "identical": true
+    },
+    {
+      "run_id": "smoke_a9a5baffcf4a5dc3",
+      "file": "source_events.parquet",
+      "identical": true
+    },
+    {
+      "run_id": "smoke_a9a5baffcf4a5dc3",
+      "file": "message_log.parquet",
+      "identical": true
+    },
+    {
+      "run_id": "smoke_a9a5baffcf4a5dc3",
+      "file": "publications.parquet",
+      "identical": true
+    },
+    {
+      "run_id": "smoke_a9a5baffcf4a5dc3",
+      "file": "source_checks.parquet",
+      "identical": true
+    },
+    {
+      "run_id": "smoke_a9a5baffcf4a5dc3",
+      "file": "proof_checks.parquet",
+      "identical": true
+    },
+    {
+      "run_id": "smoke_a9a5baffcf4a5dc3",
+      "file": "protocol_events.parquet",
+      "identical": true
+    },
+    {
+      "run_id": "smoke_a9a5baffcf4a5dc3",
+      "file": "truth_captured.parquet",
+      "identical": true
+    },
+    {
+      "run_id": "smoke_a9a5baffcf4a5dc3",
+      "file": "truth_trace.parquet",
+      "identical": true
+    },
+    {
+      "run_id": "smoke_a9a5baffcf4a5dc3",
+      "file": "window_metrics.csv",
+      "identical": true
+    },
+    {
+      "run_id": "smoke_bdcc348daf8dea54",
+      "file": "source_events.parquet",
+      "identical": true
+    },
+    {
+      "run_id": "smoke_bdcc348daf8dea54",
+      "file": "message_log.parquet",
+      "identical": true
+    },
+    {
+      "run_id": "smoke_bdcc348daf8dea54",
+      "file": "publications.parquet",
+      "identical": true
+    },
+    {
+      "run_id": "smoke_bdcc348daf8dea54",
+      "file": "source_checks.parquet",
+      "identical": true
+    },
+    {
+      "run_id": "smoke_bdcc348daf8dea54",
+      "file": "proof_checks.parquet",
+      "identical": true
+    },
+    {
+      "run_id": "smoke_bdcc348daf8dea54",
+      "file": "protocol_events.parquet",
+      "identical": true
+    },
+    {
+      "run_id": "smoke_bdcc348daf8dea54",
+      "file": "truth_captured.parquet",
+      "identical": true
+    },
+    {
+      "run_id": "smoke_bdcc348daf8dea54",
+      "file": "truth_trace.parquet",
+      "identical": true
+    },
+    {
+      "run_id": "smoke_bdcc348daf8dea54",
+      "file": "window_metrics.csv",
+      "identical": true
+    },
+    {
+      "run_id": "smoke_cfe8a1785777d805",
+      "file": "source_events.parquet",
+      "identical": true
+    },
+    {
+      "run_id": "smoke_cfe8a1785777d805",
+      "file": "message_log.parquet",
+      "identical": true
+    },
+    {
+      "run_id": "smoke_cfe8a1785777d805",
+      "file": "publications.parquet",
+      "identical": true
+    },
+    {
+      "run_id": "smoke_cfe8a1785777d805",
+      "file": "source_checks.parquet",
+      "identical": true
+    },
+    {
+      "run_id": "smoke_cfe8a1785777d805",
+      "file": "proof_checks.parquet",
+      "identical": true
+    },
+    {
+      "run_id": "smoke_cfe8a1785777d805",
+      "file": "protocol_events.parquet",
+      "identical": true
+    },
+    {
+      "run_id": "smoke_cfe8a1785777d805",
+      "file": "truth_captured.parquet",
+      "identical": true
+    },
+    {
+      "run_id": "smoke_cfe8a1785777d805",
+      "file": "truth_trace.parquet",
+      "identical": true
+    },
+    {
+      "run_id": "smoke_cfe8a1785777d805",
+      "file": "window_metrics.csv",
+      "identical": true
+    },
+    {
+      "run_id": "smoke_fdc1f696eb948d05",
+      "file": "source_events.parquet",
+      "identical": true
+    },
+    {
+      "run_id": "smoke_fdc1f696eb948d05",
+      "file": "message_log.parquet",
+      "identical": true
+    },
+    {
+      "run_id": "smoke_fdc1f696eb948d05",
+      "file": "publications.parquet",
+      "identical": true
+    },
+    {
+      "run_id": "smoke_fdc1f696eb948d05",
+      "file": "source_checks.parquet",
+      "identical": true
+    },
+    {
+      "run_id": "smoke_fdc1f696eb948d05",
+      "file": "proof_checks.parquet",
+      "identical": true
+    },
+    {
+      "run_id": "smoke_fdc1f696eb948d05",
+      "file": "protocol_events.parquet",
+      "identical": true
+    },
+    {
+      "run_id": "smoke_fdc1f696eb948d05",
+      "file": "truth_captured.parquet",
+      "identical": true
+    },
+    {
+      "run_id": "smoke_fdc1f696eb948d05",
+      "file": "truth_trace.parquet",
+      "identical": true
+    },
+    {
+      "run_id": "smoke_fdc1f696eb948d05",
+      "file": "window_metrics.csv",
+      "identical": true
+    }
+  ]
+}

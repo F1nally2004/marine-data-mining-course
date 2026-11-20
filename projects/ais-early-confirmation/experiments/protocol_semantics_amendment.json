@@ -1,0 +1,8 @@
+{
+  "version": "1.0.1",
+  "authorization": "2026-11-19 user correction; frozen experimental parameters unchanged",
+  "replaces_ambiguous_rule": "new_mmsi_after_final",
+  "rule": "An unseen identity arriving within a valid sealed source epoch and seq<=h is not by itself a false final or reopen. Update exact identities, recompute bounds and retain the independent exact numeric anchor. Invalidate only on a violated sealed-log contract or evidence inconsistent with the confirmed count.",
+  "hash_note": "A genuinely new identity outside the frozen identity set after a hash subset proof invalidates that probabilistic proof; a count-exact anchor alone does not require known identities to be complete.",
+  "frozen_config_is_read_only": true
+}
